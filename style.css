@@ -1,0 +1,322 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --dkblue: #0D4C73;
+    --medblue: #0D5673;
+    --blu: #1790BF;
+    --black: #171321;
+    --yellow: #ffe217;
+    --sand: #e4c894;
+    --dksand: #023857;
+    --aqua: #96f9f9;
+    --darkaqua: #1790BF;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* navbar */
+.top {
+    background-color: var(--dkblue);
+    margin-top: 7px;
+}
+nav {
+  background-color: var(--dkblue);
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav img {
+    height: 40px;
+    margin-top: -7px;
+    margin-left: -2px;
+    padding-right: 6px;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+}
+
+.button {
+  background-color: var(--aqua);
+  padding: 0.2rem .3rem;
+  color: var(--dkblue);
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 4px #07073a);
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--darkaqua);
+}
+
+
+
+.text-border {
+    border-radius: 20px;
+    border-left: 1px solid var(--sand);
+    border-top: 1px solid var(--sand);
+    padding: 1rem;
+}
+
+.welcome {
+    background-color: var(--dksand);
+}
+
+.intro {
+    filter: drop-shadow(5px 5px 4px #222222);
+    margin: 2rem 2rem 2rem 2rem;
+}
+
+.intro-left {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 850px) {
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+        padding-top: 4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        filter: drop-shadow(5px 5px 4px #ceceda79);
+    }
+    .intro-left {
+        grid-column: 1/7;
+        grid-row: 1/2;
+        order: 1;
+        background-color: var(--black);
+        border-radius: 20px;
+    }
+    .intro-right {
+        grid-column: 4/11;
+        grid-row: 1/2;
+        margin-left: auto;
+    }
+}
+
+.intro img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid var(--sand);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto; 
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+
+  
+}
+
+.welcome {
+  background-color: var(--dksand);
+  padding-top: 1rem;
+}
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--dkblue);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+h1, h2, h3 h4 {
+  margin: 0; 
+}
+
+a {
+  color: var(--sand);
+}
+
+a:hover {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+
+
+.intro p {
+font-size: 1.2rem;
+line-height: 1.75rem;
+}
+
+.name {
+font-family: var(--mono);
+line-height: 4rem;
+margin-top: -15px;
+}
+
+.name span {
+font-family: var(--sans);
+font-size: 3rem;
+color: var(--aqua);
+display: block;
+font-weight: normal;
+margin-bottom: 20px;
+}
+
+.intro h3 {
+font-size: 1.75rem;
+font-weight: normal;
+line-height: 3rem;
+margin-top: -11px;
+}
+
+.intro h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: .3rem;
+}
+
+/* About */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center;
+}
+
+.about-text {
+    max-width: 750px;
+    margin-top: 10px;
+}
+
+/*contact */
+
+.contact {
+  background-color: var(--dksand);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+.cont-me {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+}
+
+.contact a {
+    text-decoration: none;
+  }
+  
+  .contact a:hover {
+    color: var(--white);
+    background-color: var(--darkaqua);
+  }
+
+/* footer */
+
+footer {
+    background-color: var(--dkblue);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer [class*="fa-"] {
+    font-size: 150%;
+}
+
+.foot-name {
+    font-size: 1rem;
+}
+
+.foot-name h3 {
+    font-weight: normal;
+}
+
+.icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trademark {
+    font-size: 1rem;
+}
+
+.gradient {
+    height: 3px;
+    background: rgb(190,163,76);
+    background: radial-gradient(circle, rgba(190,163,76,1) 0%, rgba(7,111,233,1) 100%);
+}
+
+.pitch-doc-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  max-width: 75%;
+  height: auto;
+}

@@ -1,0 +1,261 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --dkblue: #0D4C73;
+    --medblue: #0D5673;
+    --blu: #1790BF;
+    --black: #171321;
+    --yellow: #ffe217;
+    --sand: #e4c894;
+    --dksand: #023857;
+    --aqua: #96f9f9;
+    --darkaqua: #1790BF;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  }
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--sans);
+    background-color: var(--dkblue);
+    color: var(--white);
+    font-size: var(--font-size);
+  }
+  h1, h2, h3 h4 {
+    margin: 0; 
+  }
+  
+  a {
+    color: var(--sand);
+  }
+  
+  a:hover {
+    color: var(--yellow);
+    text-decoration: none;
+  }
+  
+
+/* navbar */
+.top {
+    background-color: var(--dkblue);
+    margin-top: 7px;
+}
+nav {
+  background-color: var(--dkblue);
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav img {
+    height: 40px;
+    margin-top: -7px;
+    margin-left: -2px;
+    padding-right: 6px;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+}
+
+.button {
+  background-color: var(--aqua);
+  padding: 0.2rem .3rem;
+  color: var(--dkblue);
+  border-radius: 5px;
+  filter: drop-shadow(5px 5px 4px #07073a);
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--darkaqua);
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto; 
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }  
+}
+
+/* about section */
+
+.timeline {
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr;
+    font-family: var(--sans);
+}
+
+.timeline-components {
+    margin: 0px 20px 20px 20px;
+}
+
+.timeline-box {
+    padding: .5rem;
+    background: var(--dksand);
+    filter: drop-shadow(5px 5px 4px #07073a);
+    border-radius: 15px;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 1em;
+    color: var(--white);
+}
+
+.timeline-date {
+    margin-top: -5px;
+}
+
+.timeline-date-right {
+    text-align: right;
+}
+
+.line {
+    position: relative;
+    background-color: var(--white);
+    background: linear-gradient(0deg, rgba(7,111,233,1) 0%, rgba(190,163,76,1) 50%, rgba(7,111,233,1) 100%);
+}
+
+.dot {
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--sand);
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 2px #07073a);
+}
+
+.bottom-dot {
+    position: absolute;
+    top: inherit;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--sand);
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 2px #07073a);
+}
+
+.event {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--aqua);
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: var(--dkblue);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer [class*="fa-"] {
+    font-size: 150%;
+}
+
+.foot-name {
+    font-size: 1rem;
+}
+
+.foot-name h3 {
+    font-weight: normal;
+}
+
+.icons {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.trademark {
+    font-size: 1rem;
+}
+
+.gradient {
+    height: 3px;
+    background: rgb(190,163,76);
+    background: radial-gradient(circle, rgba(190,163,76,1) 0%, rgba(7,111,233,1) 100%);
+}
+
+
+.reveal {
+    position: relative;
+    transform: translateX(250px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+  }

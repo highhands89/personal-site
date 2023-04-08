@@ -99,6 +99,7 @@ nav [class*="fa-"] {
     border-left: 1px solid var(--sand);
     border-top: 1px solid var(--sand);
     padding: 1rem;
+    padding-bottom: 27px;
 }
 
 .welcome {

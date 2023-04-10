@@ -190,8 +190,6 @@ a:hover {
   text-decoration: none;
 }
 
-
-
 .intro p {
 font-size: 1.2rem;
 line-height: 1.75rem;
@@ -257,15 +255,6 @@ margin-top: -11px;
   max-width: 500px;
   margin-top: 10px;
 }
-
-.contact a {
-    text-decoration: none;
-  }
-  
-  .contact a:hover {
-    color: var(--white);
-    background-color: var(--darkaqua);
-  }
 
 /* footer */
 

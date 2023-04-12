@@ -298,6 +298,10 @@ textarea{
     background-color: #fff;
 }
 
+.g-recaptcha {
+  justify-content: center;
+}
+
 @media screen and (max-width: 880px){
 	.contact-box{
 		grid-template-columns: 1fr;
@@ -360,4 +364,11 @@ footer [class*="fa-"] {
   justify-items: center;
   max-width: 75%;
   height: auto;
+}
+
+
+/* Google Recaptcha styles */
+
+.g-recaptcha{
+  margin-bottom: 22px;
 }

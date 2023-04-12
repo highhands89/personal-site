@@ -1,7 +1,6 @@
 function sendMail() {
   // Get Google ReCaptcha Score
   let captchaToken = grecaptcha.getResponse();
-console.log(captchaToken.length)
   if (captchaToken.length > 0) {
     var params = {
       name: document.getElementById("name").value,
@@ -12,7 +11,6 @@ console.log(captchaToken.length)
 
     const serviceID = "service_fk6wcgq";
     const templateID = "template_0c9glu8";
-    console.log(captchaToken.length);
     emailjs
       .send(serviceID, templateID, params)
       .then((res) => {

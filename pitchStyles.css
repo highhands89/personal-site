@@ -162,6 +162,8 @@ a:hover {
   font-size: 2.2rem;
   font-weight: 500;
   color: var(--black);
+  padding: 0em 0em;
+  margin: -.5em;
 }
 
 .base-text {
@@ -244,6 +246,8 @@ a:hover {
 .section-2 {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin: auto 0em -.5em;
 }
 
 .section-2-col-1 {
@@ -263,6 +267,7 @@ a:hover {
 .section-heading {
   color: var(--black);
   font-size: 2.2em;
+  margin: -.5em;
 }
 
 .section-secondary h3 {
@@ -274,6 +279,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: .5rem;
+    margin: .2em 0em -.5em;
 }
 
 .section-list-item{

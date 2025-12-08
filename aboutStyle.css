@@ -357,11 +357,16 @@ nav [class*="fa-"]:hover {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    border-bottom: 2px solid var(--aqua);
+    padding-bottom: 2px;
+    display: inline-block;
 }
 
 .event a:hover {
-    filter: brightness(1.2);
-    text-decoration: underline;
+    filter: brightness(1.3);
+    border-bottom-color: var(--yellow);
+    border-bottom-width: 3px;
+    transform: translateY(-1px);
 }
 
 .event:hover {

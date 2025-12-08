@@ -1,0 +1,24 @@
+# Environment variables - NEVER commit credentials!
+.env
+*.env
+
+# Deployment scripts (optional - you may want to keep these)
+# deploy.py
+# deploy.sh
+# deploy_auto.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+

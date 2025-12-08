@@ -18,15 +18,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
     />
-    <title>K.L. Cleeton | Contact</title>
+    <title>K.L. Cleeton | Contact (Test)</title>
     <link rel="stylesheet" href="contactStyle.css" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
-    <!-- Google reCaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script defer src="contact.js"></script>
+    <script defer src="contact-test.js"></script>
     <script type="text/javascript">
       (function () {
         emailjs.init("x3LeslaSLVGHOt75r");
@@ -54,7 +52,8 @@
     <div class="container">
       <div class="contact-box">
         <div class="right">
-          <h2 class="header">Contact Me</h2>
+          <h2 class="header">Contact Me (Test Version - No CAPTCHA)</h2>
+          <p style="color: var(--yellow); margin-bottom: 1rem;">⚠️ This is a test version for localhost. Use contact.html on the live site.</p>
           <input type="text" class="field name" id="name" placeholder="Name" />
           <input
             type="text"
@@ -67,10 +66,6 @@
             class="field message"
             id="message"
           ></textarea>
-          <div
-            class="g-recaptcha"
-            data-sitekey="6LfhLX0lAAAAANbQ1K1fkZze0BbYHb5OZt1YMGF1"
-          ></div>
           <button class="btn" onclick="sendMail()">Send</button>
         </div>
       </div>
@@ -117,3 +112,4 @@
     </footer>
   </body>
 </html>
+

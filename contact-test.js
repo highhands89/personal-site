@@ -1,3 +1,4 @@
+// Test version without reCAPTCHA for localhost testing
 function sendMail() {
   // Validate form fields
   const name = document.getElementById("name").value.trim();
@@ -16,21 +17,14 @@ function sendMail() {
     return;
   }
 
-  // Get Google ReCaptcha Score
-  let captchaToken = grecaptcha.getResponse();
-  if (captchaToken.length === 0) {
-    alert("Please complete the reCAPTCHA verification.");
-    return;
-  }
-
   var params = {
     name: name,
     email: email,
     message: message,
-    "g-recaptcha-response": captchaToken,
+    // No reCAPTCHA token for test version
   };
 
-  const serviceID = "service_kza02w6";
+  const serviceID = "service_fk6wcgq";
   const templateID = "template_0c9glu8";
   
   // Disable button during submission
@@ -46,26 +40,21 @@ function sendMail() {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
       document.getElementById("message").value = "";
-      grecaptcha.reset(); // Reset reCAPTCHA
       alert("Thanks for reaching out! I'll get back to you soon.");
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
     })
     .catch((err) => {
       console.error("EmailJS Error:", err);
-      console.error("Error Status:", err.status);
-      console.error("Error Text:", err.text);
-      console.error("Full Error Object:", JSON.stringify(err, null, 2));
-      
-      let errorMessage = "Sorry, there was an error sending your message.";
-      if (err.text) {
-        errorMessage += "\n\nError: " + err.text;
-        console.error("Detailed Error:", err.text);
-      }
-      errorMessage += "\n\nPlease try again or email me directly at kl@rangetrainerpro.com";
-      
-      alert(errorMessage);
+      alert("Sorry, there was an error sending your message. Please try again or email me directly at kl@rangetrainerpro.com\n\nError: " + (err.text || err.message || "Unknown error"));
       submitBtn.disabled = false;
       submitBtn.textContent = originalText;
+      
+      // Log detailed error for debugging
+      console.error("Full error object:", err);
+      if (err.text) {
+        console.error("Error details:", err.text);
+      }
     });
 }
+

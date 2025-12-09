@@ -442,12 +442,19 @@ footer [class*="fa-"]:hover {
 
 .reveal {
     position: relative;
-    transform: translateX(250px);
     opacity: 0;
     transition: 1s all ease;
   }
   
-  .reveal.active{
+  .reveal.reveal-left {
+    transform: translateX(-250px);
+  }
+  
+  .reveal.reveal-right {
+    transform: translateX(250px);
+  }
+  
+  .reveal.active {
     transform: translateX(0);
     opacity: 1;
   }

@@ -95,7 +95,7 @@ main {
 nav {
 background: transparent;
 font-family: var(--mono);
-font-size: 100%;
+font-size: 80%;
 padding: 1rem;
 transition: all 0.3s ease;
 }
@@ -140,7 +140,6 @@ nav a:hover::after {
 
 nav h1 a {
 font-family: var(--sans);
-font-size: 1em;
 padding: 0;
 margin: 0;
 display: flex;

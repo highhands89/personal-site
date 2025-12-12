@@ -296,7 +296,6 @@ nav [class*="fa-"]:hover {
     background-size: 100% 200%;
     animation: lineFlow 3s ease infinite;
     box-shadow: 0 0 10px rgba(150, 249, 249, 0.5);
-    min-height: 50px;
 }
 
 @keyframes lineFlow {

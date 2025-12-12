@@ -325,7 +325,6 @@ nav [class*="fa-"]:hover {
 
 .bottom-dot {
     position: absolute;
-    top: inherit;
     bottom: 0;
     width: 15px;
     height: 15px;

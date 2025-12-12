@@ -285,6 +285,20 @@ nav [class*="fa-"]:hover {
     text-align: right;
 }
 
+.timeline-date-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background: rgba(2, 56, 87, 0.9);
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    margin-top: -5px;
+    font-size: 0.9em;
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .line {
     position: relative;
     background: linear-gradient(0deg, 
